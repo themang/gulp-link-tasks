@@ -17,7 +17,6 @@ exports.mkdir = mkdir;
 exports.rmdir = rmdir;
 
 function link() {
-  console.log('link');
   var watch = false;
   var sources = _.toArray(arguments);
   return {
