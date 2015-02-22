@@ -27,7 +27,7 @@ function link() {
     to: function(dest) {
       return function() {
         sources.forEach(function(source) {
-          fs.symlinkSync(path.resolve(source), dest + '/' + source, 'dir');
+          fs.symlinkSync(path.relative(dest, path.resolve(source)), dest + '/' + source, 'dir');
         });
       }
     }
